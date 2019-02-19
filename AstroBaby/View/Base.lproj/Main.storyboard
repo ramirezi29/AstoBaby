@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sSV-WD-XOl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Couple-->
+        <scene sceneID="Ae2-VK-xBw">
+            <objects>
+                <viewController id="eI1-Cf-BP1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bpN-93-6pa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.023529411760000001" green="0.58431372550000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="eJQ-N2-DM6"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Couple" id="Q7k-dZ-jJ9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Phf-Mm-AFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="255" y="334"/>
+        </scene>
+        <!--Baby-->
+        <scene sceneID="NMv-FR-eRd">
+            <objects>
+                <viewController id="ncV-5b-66j" customClass="ParentSelectionVC" customModule="AstroBaby" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nw6-0r-ZaL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xq8-2K-11B" customClass="IRButton" customModule="AstroBaby" customModuleProvider="target">
+                                <rect key="frame" x="94" y="163" width="187.5" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.37609732109999999" blue="0.62530238319999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="(analyze)"/>
+                                <connections>
+                                    <action selector="analyzeButtonTapped:" destination="ncV-5b-66j" eventType="touchUpInside" id="NtT-PK-bT0"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pfx-2n-wXb" userLabel="Parent Zodiac Collection View">
+                                <rect key="frame" x="24" y="27" width="320" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yRJ-J6-XNk">
+                                    <size key="itemSize" width="135" height="131"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="selectedParentZodiacCell" id="YSY-Rq-O51" customClass="SelectedParentCVCell" customModule="AstroBaby" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="131"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="135" height="131"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b38-Au-Anf" userLabel="Right Parent Stack View">
+                                                    <rect key="frame" x="13.5" y="9" width="88.5" height="112"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TQi-Vm-Jcc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="88.5" height="83.5"/>
+                                                            <color key="backgroundColor" red="0.15527736419999999" green="0.22384873259999999" blue="0.49539458749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="(Sign)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56n-09-t1b">
+                                                            <rect key="frame" x="0.0" y="91.5" width="88.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="selectedParentImageView" destination="TQi-Vm-Jcc" id="IGH-OA-Mse"/>
+                                            <outlet property="seletedParentZodiacLabel" destination="56n-09-t1b" id="ehD-pr-nQf"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l3d-eu-1Xn" userLabel="Zodiac Signs Collection View">
+                                <rect key="frame" x="19" y="201" width="338" height="417"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ayA-XP-QvS">
+                                    <size key="itemSize" width="87" height="94"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="zodiacCell" id="ifU-eH-AW5" customClass="ParentSelectionVCell" customModule="AstroBaby" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="87" height="94"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="87" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Le0-yS-rVv">
+                                                    <rect key="frame" x="2" y="0.0" width="85" height="73"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Sign)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8m-WQ-vtv">
+                                                    <rect key="frame" x="0.0" y="73" width="85" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="C8m-WQ-vtv" secondAttribute="trailing" symbolic="YES" id="5Gw-MI-mSb"/>
+                                            <constraint firstItem="Le0-yS-rVv" firstAttribute="width" secondItem="ifU-eH-AW5" secondAttribute="width" constant="-2" id="G7f-uK-dOa"/>
+                                            <constraint firstItem="C8m-WQ-vtv" firstAttribute="width" secondItem="ifU-eH-AW5" secondAttribute="width" constant="-2" id="HFk-0d-hkp"/>
+                                            <constraint firstItem="Le0-yS-rVv" firstAttribute="height" secondItem="ifU-eH-AW5" secondAttribute="height" constant="-21" id="Yr4-EM-jQq"/>
+                                            <constraint firstAttribute="bottom" secondItem="Le0-yS-rVv" secondAttribute="bottom" constant="21" id="h4k-Ey-xM2"/>
+                                            <constraint firstItem="Le0-yS-rVv" firstAttribute="top" secondItem="ifU-eH-AW5" secondAttribute="top" id="uCE-Th-ayT"/>
+                                            <constraint firstAttribute="trailing" secondItem="Le0-yS-rVv" secondAttribute="trailing" id="uk1-QJ-k1q"/>
+                                            <constraint firstItem="C8m-WQ-vtv" firstAttribute="top" secondItem="ifU-eH-AW5" secondAttribute="top" constant="73" id="xHr-XC-I4g"/>
+                                            <constraint firstItem="C8m-WQ-vtv" firstAttribute="leading" secondItem="ifU-eH-AW5" secondAttribute="leading" id="yOm-XZ-SNj"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="zodiacImageView" destination="Le0-yS-rVv" id="Nhf-gh-XMI"/>
+                                            <outlet property="zodiacNameLabel" destination="C8m-WQ-vtv" id="oRV-L1-1Y7"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xq8-2K-11B" firstAttribute="width" secondItem="Nw6-0r-ZaL" secondAttribute="width" multiplier="0.5" id="5PV-tT-CRd"/>
+                            <constraint firstItem="kb1-V8-hSe" firstAttribute="bottom" secondItem="l3d-eu-1Xn" secondAttribute="bottom" id="93L-sI-MRv"/>
+                            <constraint firstItem="xq8-2K-11B" firstAttribute="leading" secondItem="kb1-V8-hSe" secondAttribute="leading" constant="94" id="I8p-yS-vay"/>
+                            <constraint firstItem="l3d-eu-1Xn" firstAttribute="width" secondItem="Nw6-0r-ZaL" secondAttribute="width" multiplier="0.9" id="J2A-uV-VGS"/>
+                            <constraint firstItem="l3d-eu-1Xn" firstAttribute="top" secondItem="kb1-V8-hSe" secondAttribute="top" constant="181" id="OW3-G8-vxl"/>
+                            <constraint firstItem="kb1-V8-hSe" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xq8-2K-11B" secondAttribute="trailing" symbolic="YES" id="Zef-yu-B5H"/>
+                            <constraint firstItem="kb1-V8-hSe" firstAttribute="trailing" secondItem="l3d-eu-1Xn" secondAttribute="trailing" constant="18" id="amT-3A-GAf"/>
+                            <constraint firstItem="xq8-2K-11B" firstAttribute="top" secondItem="kb1-V8-hSe" secondAttribute="top" constant="143" id="xH1-yD-tee"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kb1-V8-hSe"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Baby" id="2hc-0V-q9O"/>
+                    <connections>
+                        <outlet property="analyzeButton" destination="xq8-2K-11B" id="Pq9-Hv-US2"/>
+                        <outlet property="buttomCollectionView" destination="l3d-eu-1Xn" id="Tl0-Wm-cvQ"/>
+                        <outlet property="topCollectionView" destination="pfx-2n-wXb" id="ly1-dm-28L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m0I-Wf-K9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253.59999999999999" y="-330.58470764617692"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="DP1-ib-Kfe">
+            <objects>
+                <tabBarController id="sSV-WD-XOl" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pBj-AH-hty">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ncV-5b-66j" kind="relationship" relationship="viewControllers" id="5tF-gt-APT"/>
+                        <segue destination="eI1-Cf-BP1" kind="relationship" relationship="viewControllers" id="SPb-Jc-2Og"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jCt-BX-5Qx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-695" y="2"/>
+        </scene>
+    </scenes>
+</document>
