@@ -1,19 +1,25 @@
 //
-//  ZodiacSelectionContainerView.swift
+//  AnalyzedVC.swift
 //  AstroBaby
 //
-//  Created by Ivan Ramirez on 2/19/19.
+//  Created by Ivan Ramirez on 3/9/19.
 //  Copyright © 2019 ramcomw. All rights reserved.
 //
 
 import UIKit
 
-class ZodiacSelectionContainerView: UIViewController {
+class AnalyzedVC: UIViewController {
 
+    // MARK: - Constants and Variables
+    var parentOne: Int?
+    var parentTwo: Int?
+    
+    // MARK: - Life Cyles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print("parent 1: \(String(describing: parentOne) )\nparent 2:\(String(describing: parentTwo))")
     }
     
 
