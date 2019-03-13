@@ -16,16 +16,23 @@ class ParentSelectionVC: UIViewController {
     @IBOutlet weak var buttomCollectionView: UICollectionView!
     @IBOutlet weak var topCollectionView: UICollectionView!
     
-    var selectedParentCell: SelectedParentCVCell?
+      // MARK: - Constants and Vars
     
-    // MARK: - Constants and Vars
-
+    let analyzeSegueKey = "analyzeSegue"
+    var selectedParentCell: SelectedParentCVCell?
+    var parentOneSelected = false
+    var parentTwoSelected = true
+    
     var parentOne: Int? {
         didSet {
             topCollectionView.reloadData()
         }
     }
-    var parentTwo: Int?
+    var parentTwo: Int? {
+    didSet {
+    topCollectionView.reloadData()
+    }
+}
     let zodiacSelectionCell = "zodiacCell"
     let selectedZodiacCell = "selectedParentZodiacCell"
     
@@ -45,8 +52,8 @@ class ParentSelectionVC: UIViewController {
         
         //Review
         
-//        //tst
-//        self.topCollectionView.reloadData()
+        //        //tst
+        //        self.topCollectionView.reloadData()
         
         self.buttomCollectionView.allowsMultipleSelection = false
         self.buttomCollectionView.selectItem(at: NSIndexPath(item: 0, section: 0) as IndexPath, animated: false, scrollPosition: [])
@@ -59,6 +66,8 @@ class ParentSelectionVC: UIViewController {
     
     @IBAction func analyzeButtonTapped(_ sender: IRButton) {
         //compare the two selected zodiac signs
+      
+       
     }
     
 }
@@ -87,12 +96,12 @@ extension ParentSelectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
             }
             
             switch indexPath.row {
-                // NOTE: - Parent One
+            // NOTE: - Parent One
             case 0:
                 if let parentOne = self.parentOne {
-                   cell.selectedZodiac = ZodiacController.zodiacs[parentOne]
+                    cell.selectedZodiac = ZodiacController.zodiacs[parentOne]
                 }
-                 // NOTE: - Parent Two
+            // NOTE: - Parent Two
             case 1:
                 if let parentTwo = self.parentTwo {
                     cell.selectedZodiac = ZodiacController.zodiacs[parentTwo]
@@ -117,41 +126,66 @@ extension ParentSelectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
             return cell
         }
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.contentView.alpha = 0.5
         
-        
-        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            let cell = collectionView.cellForItem(at: indexPath)
-            cell?.contentView.alpha = 0.5
+        // NOTE: - Getting the info from the selected cell
+        if let collectionView = self.buttomCollectionView,
+            let indexPath = collectionView.indexPathsForSelectedItems?.first,
+            let celly = collectionView.cellForItem(at: indexPath) as? ParentSelectionVCell,
+            let data = celly.zodiacNameLabel.text {
             
-            // NOTE: - Getting the info from the selected cell
-            if let collectionView = self.buttomCollectionView,
-                let indexPath = collectionView.indexPathsForSelectedItems?.first,
-                let celly = collectionView.cellForItem(at: indexPath) as? ParentSelectionVCell,
-                let data = celly.zodiacNameLabel.text {
-                
-               let selectedImage = ZodiacController.transferZodiact(zodiactName: data)
-                
-                print("🧐 \(selectedImage)")
-                print(data)
-                
-                // NOTE: -  Need to account the user changing their mind or selected a new index, have that populate
-                
-                //
-              
-//                if parentOne == nil {
-                    parentOne = indexPath.row
-//                } else if parentTwo == nil {
+            let selectedImage = ZodiacController.transferZodiact(zodiactName: data)
+            
+            print("🧐 \(selectedImage)")
+            print(data)
+            
+            // NOTE: -  Need to account the user changing their mind or selected a new index, have that populate
+            
+            // NOTE: - It starts off as True
+            switch parentTwoSelected {
+            case true:
+                parentTwoSelected = false
+                print("👐👐 1 has been set to false ")
+            case false:
+                print("👐 2 has been set to true ")
                     parentTwo = indexPath.row
-//                }
+                print("\n😈 1  populate😈")
+                parentTwoSelected = true
                 
-                print(parentOne?.description ?? "Parent One has no String ")
+            }
+            
+            switch parentOneSelected {
+            case false:
+                parentOneSelected = true
+                print("👌🏽 2 has been set to true")
+                print("\n🥶 1  populate 🥶")
+                parentOne = indexPath.row
+            case true:
+                parentOneSelected = false
+                print("👌🏽👌🏽 2 has been set to false")
+                print("\nParent ONe selected was true but now its false")
             }
         }
-        
-        func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-            let cell = collectionView.cellForItem(at: indexPath)
-            cell?.contentView.alpha = 1.0
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == analyzeSegueKey {
+            let destinationVC = segue.destination as? AnalyzedVC
+            
+            destinationVC?.parentOne = parentOne
+            destinationVC?.parentTwo = parentTwo
         }
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.contentView.alpha = 1.0
+    }
 }
 
 
