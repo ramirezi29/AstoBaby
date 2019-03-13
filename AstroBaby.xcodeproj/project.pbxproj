@@ -67,7 +67,6 @@
 		473DFE622217DA0600755C2A = {
 			isa = PBXGroup;
 			children = (
-				473DED60221D220E00035D57 /* Couples.storyboard */,
 				473DFE6D2217DA0700755C2A /* AstroBaby */,
 				473DFE6C2217DA0700755C2A /* Products */,
 			);
@@ -117,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				473DFE722217DA0700755C2A /* Main.storyboard */,
+				473DED60221D220E00035D57 /* Couples.storyboard */,
 				473DFE7A2217DA0A00755C2A /* LaunchScreen.storyboard */,
 				47E4864A221909DC00F04FAE /* ParentSelectionVCell.swift */,
 				47F9DD93221B0E2900E208C8 /* SelectedParentCVCell.swift */,

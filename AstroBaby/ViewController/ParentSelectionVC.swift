@@ -16,7 +16,7 @@ class ParentSelectionVC: UIViewController {
     @IBOutlet weak var buttomCollectionView: UICollectionView!
     @IBOutlet weak var topCollectionView: UICollectionView!
     
-      // MARK: - Constants and Vars
+    // MARK: - Constants and Vars
     
     let analyzeSegueKey = "analyzeSegue"
     var selectedParentCell: SelectedParentCVCell?
@@ -29,10 +29,10 @@ class ParentSelectionVC: UIViewController {
         }
     }
     var parentTwo: Int? {
-    didSet {
-    topCollectionView.reloadData()
+        didSet {
+            topCollectionView.reloadData()
+        }
     }
-}
     let zodiacSelectionCell = "zodiacCell"
     let selectedZodiacCell = "selectedParentZodiacCell"
     
@@ -66,8 +66,8 @@ class ParentSelectionVC: UIViewController {
     
     @IBAction func analyzeButtonTapped(_ sender: IRButton) {
         //compare the two selected zodiac signs
-      
-       
+        
+        
     }
     
 }
@@ -152,7 +152,7 @@ extension ParentSelectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
                 print("👐👐 1 has been set to false ")
             case false:
                 print("👐 2 has been set to true ")
-                    parentTwo = indexPath.row
+                parentTwo = indexPath.row
                 print("\n😈 1  populate😈")
                 parentTwoSelected = true
                 
