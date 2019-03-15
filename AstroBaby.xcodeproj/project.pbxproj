@@ -22,6 +22,7 @@
 		47E486492219096600F04FAE /* ParentSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E486482219096600F04FAE /* ParentSelectionVC.swift */; };
 		47E4864B221909DC00F04FAE /* ParentSelectionVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E4864A221909DC00F04FAE /* ParentSelectionVCell.swift */; };
 		47F9DD94221B0E2900E208C8 /* SelectedParentCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9DD93221B0E2900E208C8 /* SelectedParentCVCell.swift */; };
+		7E8BE3B0223BE40E007D1923 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8BE3AF223BE40E007D1923 /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		47E486482219096600F04FAE /* ParentSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentSelectionVC.swift; sourceTree = "<group>"; };
 		47E4864A221909DC00F04FAE /* ParentSelectionVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentSelectionVCell.swift; sourceTree = "<group>"; };
 		47F9DD93221B0E2900E208C8 /* SelectedParentCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedParentCVCell.swift; sourceTree = "<group>"; };
+		7E8BE3AF223BE40E007D1923 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				47569EA32219441F003CE666 /* ButtonController.swift */,
 				47569EA522194442003CE666 /* MyColor.swift */,
+				7E8BE3AF223BE40E007D1923 /* DateHelper.swift */,
 			);
 			path = HelperFiles;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				473DFE6F2217DA0700755C2A /* AppDelegate.swift in Sources */,
 				47F9DD94221B0E2900E208C8 /* SelectedParentCVCell.swift in Sources */,
 				4727518422342E2200415E2C /* AnalyzedVC.swift in Sources */,
+				7E8BE3B0223BE40E007D1923 /* DateHelper.swift in Sources */,
 				47E4864B221909DC00F04FAE /* ParentSelectionVCell.swift in Sources */,
 				47569EA622194442003CE666 /* MyColor.swift in Sources */,
 			);
@@ -387,7 +391,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L7AYJDAX2C;
+				DEVELOPMENT_TEAM = HVDL2745KX;
 				INFOPLIST_FILE = "$(SRCROOT)/AstroBaby/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -405,7 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L7AYJDAX2C;
+				DEVELOPMENT_TEAM = HVDL2745KX;
 				INFOPLIST_FILE = "$(SRCROOT)/AstroBaby/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
