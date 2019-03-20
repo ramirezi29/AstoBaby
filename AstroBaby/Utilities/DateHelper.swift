@@ -10,7 +10,7 @@ import Foundation
 
 extension Date {
     
-    var mMdDyY: String {
+    var mmddyy: String {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US")
         formatter.dateStyle = .long
