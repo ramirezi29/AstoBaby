@@ -10,9 +10,11 @@ import UIKit
 
 class AnalyzedVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    @IBOutlet weak var chosenZodiacLabel: UILabel!
+    // MARK: - Outlets
+    
     @IBOutlet weak var yearPicker: UIPickerView!
     @IBOutlet weak var outputLabel: UILabel!
+    @IBOutlet weak var chosenZodiac: UILabel!
     
     // MARK: - Constants and Variables
     
@@ -51,7 +53,7 @@ class AnalyzedVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
             goalComponents.month = 4
             goalComponents.day = 20
             goalEnd = goalComponents.date!
-             var desiredZodiac = "aries"
+            desiredZodiac = "aries"
             
             
          case UIImage(named: "taurus"): // April 21 - May 21
@@ -61,7 +63,7 @@ class AnalyzedVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
             goalComponents.month = 5
             goalComponents.day = 21
             goalEnd = goalComponents.date!
-             var desiredZodiac = "taurus"
+            desiredZodiac = "taurus"
             
         case UIImage(named: "gemini"): // May 22 - June 21
             goalComponents.month = 5
@@ -155,11 +157,12 @@ class AnalyzedVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         default: return
         }
         
+        chosenZodiac.text = desiredZodiac.uppercased() + " \(yearPicker.selectedRow(inComponent: 0) + 2019)"
         conceptionStart = goalStart.subtract38Weeks
         conceptionMiddle = conceptionStart.add15Days
         conceptionEnd = goalEnd.subtract38Weeks
         
-        outputLabel.text = "\(desiredZodiac) babies are born between \(goalStart.mmmmd) and \(goalEnd.mmmmd).\nThe suggested conception window for a \(yearPicker.selectedRow(inComponent: 0) + 2019) \(desiredZodiac) baby is between \(conceptionStart.mMdDyY) and \(conceptionEnd.mMdDyY).\nThe optimal conception date is \(conceptionMiddle.mMdDyY)."
+        outputLabel.text = "\(desiredZodiac) babies are born between \(goalStart.mmmmd) and \(goalEnd.mmmmd).\n\n\nThe suggested conception window for a \(yearPicker.selectedRow(inComponent: 0) + 2019) \(desiredZodiac) baby is between \(conceptionStart.mmddyy) and \(conceptionEnd.mmddyy).\n\n\nThe optimal conception date is \(conceptionMiddle.mmddyy)."
     }
     
     // MARK: - YearPicker

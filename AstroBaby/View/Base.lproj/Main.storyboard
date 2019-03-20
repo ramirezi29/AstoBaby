@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,7 +23,7 @@
                                 <color key="backgroundColor" red="1" green="0.37609732109999999" blue="0.62530238319999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="(analyze)"/>
                                 <connections>
-                                    <segue destination="5xW-z0-Zcs" kind="show" identifier="analyzeSegue" id="WlH-PX-VCP"/>
+                                    <segue destination="lER-u4-Hy9" kind="show" id="Zd7-gB-Cpo"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pfx-2n-wXb" userLabel="Parent Zodiac Collection View">
@@ -142,95 +141,88 @@
             <point key="canvasLocation" x="97" y="-271"/>
         </scene>
         <!--AnalyzedVC-->
-        <scene sceneID="BDh-ME-OPX">
+        <scene sceneID="kvy-a8-Usb">
             <objects>
-                <viewController id="5xW-z0-Zcs" customClass="AnalyzedVC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="o53-oc-Ya2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                <viewController id="lER-u4-Hy9" customClass="AnalyzedVC" customModule="AstroBaby" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y8S-bg-8tc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cPw-jz-e6B">
-                                <rect key="frame" x="12" y="32" width="351" height="83.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7Ng-9H-bSa">
+                                <rect key="frame" x="24" y="44" width="327" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yi6-ic-78a">
-                                        <rect key="frame" x="0.0" y="0.0" width="83.5" height="83.5"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Yi6-ic-78a" secondAttribute="height" multiplier="1:1" id="7C5-Uk-0J6"/>
-                                            <constraint firstAttribute="height" constant="83.5" id="XJD-OW-mT3"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojq-DL-kG7">
+                                        <rect key="frame" x="0.0" y="0.0" width="109" height="44"/>
+                                        <state key="normal" image="scorpio"/>
                                         <connections>
-                                            <action selector="zodiacButtonTapped:" destination="5xW-z0-Zcs" eventType="touchUpInside" id="ybD-lR-k0F"/>
+                                            <action selector="zodiacButtonTapped:" destination="lER-u4-Hy9" eventType="touchUpInside" id="bs2-fD-dUK"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWK-7V-HSD">
-                                        <rect key="frame" x="134" y="0.0" width="83.5" height="83.5"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="qWK-7V-HSD" secondAttribute="height" multiplier="1:1" id="INc-IJ-NV2"/>
-                                            <constraint firstAttribute="height" constant="83.5" id="QW7-3x-pfz"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugb-AP-5If">
+                                        <rect key="frame" x="109" y="0.0" width="109" height="44"/>
+                                        <state key="normal" image="aquarius"/>
+                                        <connections>
+                                            <action selector="zodiacButtonTapped:" destination="lER-u4-Hy9" eventType="touchUpInside" id="ACl-r6-Oee"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5D-nd-MHg">
-                                        <rect key="frame" x="267.5" y="0.0" width="83.5" height="83.5"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="83.5" id="Kfw-Ni-qg7"/>
-                                            <constraint firstAttribute="width" secondItem="k5D-nd-MHg" secondAttribute="height" multiplier="1:1" id="mc2-nG-oqO"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGM-va-16J">
+                                        <rect key="frame" x="218" y="0.0" width="109" height="44"/>
+                                        <state key="normal" image="virgo"/>
+                                        <connections>
+                                            <action selector="zodiacButtonTapped:" destination="lER-u4-Hy9" eventType="touchUpInside" id="vOH-ev-WIG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="xL5-ei-9Gg"/>
+                                </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dRW-8d-SBN">
-                                <rect key="frame" x="12" y="127.5" width="351" height="100"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(zodiac)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvn-ij-reB">
-                                        <rect key="frame" x="0.0" y="0.0" width="62.5" height="100"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="jRl-cb-wIR">
-                                        <rect key="frame" x="70.5" y="0.0" width="280.5" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="j0d-41-k2v"/>
-                                        </constraints>
-                                    </pickerView>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTo-9h-jOX">
-                                <rect key="frame" x="12" y="239.5" width="351" height="548.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(chosen zodiac)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ana-oR-Ldf">
+                                <rect key="frame" x="24" y="112" width="327" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="(output)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wb4-F8-5da">
+                                <rect key="frame" x="24" y="304.5" width="327" height="338.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQC-AW-1ye">
+                                <rect key="frame" x="24" y="156.5" width="327" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="124" id="vkY-qe-fte"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ECp-c6-YM6" firstAttribute="trailing" secondItem="cPw-jz-e6B" secondAttribute="trailing" constant="12" id="42p-EG-uhQ"/>
-                            <constraint firstItem="iTo-9h-jOX" firstAttribute="top" secondItem="dRW-8d-SBN" secondAttribute="bottom" constant="12" id="4U6-Rl-Bp6"/>
-                            <constraint firstItem="iTo-9h-jOX" firstAttribute="leading" secondItem="ECp-c6-YM6" secondAttribute="leading" constant="12" id="7ri-xE-E1N"/>
-                            <constraint firstItem="cPw-jz-e6B" firstAttribute="top" secondItem="ECp-c6-YM6" secondAttribute="top" constant="12" id="8lb-KW-Lqf"/>
-                            <constraint firstItem="ECp-c6-YM6" firstAttribute="bottom" secondItem="iTo-9h-jOX" secondAttribute="bottom" constant="12" id="9Bf-Cz-hGu"/>
-                            <constraint firstItem="dRW-8d-SBN" firstAttribute="leading" secondItem="ECp-c6-YM6" secondAttribute="leading" constant="12" id="Lxf-2S-7b9"/>
-                            <constraint firstAttribute="trailing" secondItem="dRW-8d-SBN" secondAttribute="trailing" constant="12" id="dsr-AA-PIl"/>
-                            <constraint firstItem="cPw-jz-e6B" firstAttribute="centerX" secondItem="ECp-c6-YM6" secondAttribute="centerX" id="ksb-7C-5ZA"/>
-                            <constraint firstItem="ECp-c6-YM6" firstAttribute="trailing" secondItem="iTo-9h-jOX" secondAttribute="trailing" constant="12" id="qxQ-MQ-SDl"/>
-                            <constraint firstItem="dRW-8d-SBN" firstAttribute="top" secondItem="cPw-jz-e6B" secondAttribute="bottom" constant="12" id="ssH-hd-fTp"/>
-                            <constraint firstItem="cPw-jz-e6B" firstAttribute="leading" secondItem="ECp-c6-YM6" secondAttribute="leading" constant="12" id="vrG-Ph-Qwt"/>
+                            <constraint firstItem="Wb4-F8-5da" firstAttribute="top" secondItem="yQC-AW-1ye" secondAttribute="bottom" constant="24" id="2Wg-Yo-oX7"/>
+                            <constraint firstItem="L2B-BX-3pC" firstAttribute="trailing" secondItem="7Ng-9H-bSa" secondAttribute="trailing" constant="24" id="7jP-SU-zZD"/>
+                            <constraint firstItem="7Ng-9H-bSa" firstAttribute="leading" secondItem="L2B-BX-3pC" secondAttribute="leading" constant="24" id="9By-bd-hmJ"/>
+                            <constraint firstItem="yQC-AW-1ye" firstAttribute="leading" secondItem="L2B-BX-3pC" secondAttribute="leading" constant="24" id="I6n-MM-4Zo"/>
+                            <constraint firstItem="L2B-BX-3pC" firstAttribute="trailing" secondItem="Ana-oR-Ldf" secondAttribute="trailing" constant="24" id="KQ4-Uk-Bmm"/>
+                            <constraint firstItem="7Ng-9H-bSa" firstAttribute="top" secondItem="L2B-BX-3pC" secondAttribute="top" constant="24" id="RRu-Qr-gtX"/>
+                            <constraint firstItem="Ana-oR-Ldf" firstAttribute="leading" secondItem="L2B-BX-3pC" secondAttribute="leading" constant="24" id="ZZv-f0-gNA"/>
+                            <constraint firstItem="Wb4-F8-5da" firstAttribute="leading" secondItem="L2B-BX-3pC" secondAttribute="leading" constant="24" id="cJk-Br-U1O"/>
+                            <constraint firstItem="L2B-BX-3pC" firstAttribute="bottom" secondItem="Wb4-F8-5da" secondAttribute="bottom" constant="24" id="m2X-q8-qdT"/>
+                            <constraint firstItem="yQC-AW-1ye" firstAttribute="trailing" secondItem="L2B-BX-3pC" secondAttribute="trailing" constant="-24" id="piQ-EF-264"/>
+                            <constraint firstItem="yQC-AW-1ye" firstAttribute="top" secondItem="Ana-oR-Ldf" secondAttribute="bottom" constant="24" id="tpD-1e-Q12"/>
+                            <constraint firstItem="Ana-oR-Ldf" firstAttribute="top" secondItem="7Ng-9H-bSa" secondAttribute="bottom" constant="24" id="wke-Q4-XsN"/>
+                            <constraint firstItem="L2B-BX-3pC" firstAttribute="trailing" secondItem="Wb4-F8-5da" secondAttribute="trailing" constant="24" id="zo7-kN-u5m"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ECp-c6-YM6"/>
+                        <viewLayoutGuide key="safeArea" id="L2B-BX-3pC"/>
                     </view>
-                    <size key="freeformSize" width="375" height="800"/>
                     <connections>
-                        <outlet property="chosenZodiacLabel" destination="mvn-ij-reB" id="bSL-7v-rGi"/>
-                        <outlet property="outputLabel" destination="iTo-9h-jOX" id="giA-fE-K8a"/>
-                        <outlet property="yearPicker" destination="jRl-cb-wIR" id="PPK-V4-lGT"/>
+                        <outlet property="chosenZodiac" destination="Ana-oR-Ldf" id="mLQ-V0-CIg"/>
+                        <outlet property="outputLabel" destination="Wb4-F8-5da" id="V4H-S3-mtQ"/>
+                        <outlet property="yearPicker" destination="yQC-AW-1ye" id="9Xx-oI-1vW"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gv2-74-Uo2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTG-7H-mM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="-271"/>
+            <point key="canvasLocation" x="924" y="-276"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DP1-ib-Kfe">
@@ -261,4 +253,9 @@
             <point key="canvasLocation" x="-677" y="268"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="aquarius" width="15.747265815734863" height="15.747265815734863"/>
+        <image name="scorpio" width="31.532846450805664" height="31.532846450805664"/>
+        <image name="virgo" width="31.532846450805664" height="31.532846450805664"/>
+    </resources>
 </document>
