@@ -28,6 +28,7 @@ class ParentSelectionVC: UIViewController {
             topCollectionView.reloadData()
         }
     }
+    
     var parentTwo: Int? {
         didSet {
             topCollectionView.reloadData()
@@ -35,7 +36,6 @@ class ParentSelectionVC: UIViewController {
     }
     let zodiacSelectionCell = "zodiacCell"
     let selectedZodiacCell = "selectedParentZodiacCell"
-    
     
     // McteARK: - Life Cyles
     
@@ -140,20 +140,16 @@ extension ParentSelectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
             
             let selectedImage = ZodiacController.transferZodiact(zodiactName: data)
             
-            print("🧐 \(selectedImage)")
-            print(data)
+            print("\nSelected Cell: \(selectedImage)")
+                    print("Selected Cell Data String: \(data)\n")
             
-            // NOTE: -  Need to account the user changing their mind or selected a new index, have that populate
             
-            // NOTE: - It starts off as True
+            // NOTE: - parentTwoSelected starts off as True
             switch parentTwoSelected {
             case true:
                 parentTwoSelected = false
-                print("👐👐 1 has been set to false ")
             case false:
-                print("👐 2 has been set to true ")
                 parentTwo = indexPath.row
-                print("\n😈 1  populate😈")
                 parentTwoSelected = true
                 
             }
@@ -161,13 +157,9 @@ extension ParentSelectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
             switch parentOneSelected {
             case false:
                 parentOneSelected = true
-                print("👌🏽 2 has been set to true")
-                print("\n🥶 1  populate 🥶")
                 parentOne = indexPath.row
             case true:
                 parentOneSelected = false
-                print("👌🏽👌🏽 2 has been set to false")
-                print("\nParent ONe selected was true but now its false")
             }
         }
     }

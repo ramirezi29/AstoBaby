@@ -10,12 +10,14 @@ import UIKit
 
 class AnalyzedVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    // MARK: - Constants and Variables
-    var parentOne: Int?
-    var parentTwo: Int?
     @IBOutlet weak var chosenZodiacLabel: UILabel!
     @IBOutlet weak var yearPicker: UIPickerView!
     @IBOutlet weak var outputLabel: UILabel!
+    
+    // MARK: - Constants and Variables
+    
+    var parentOne: Int?
+    var parentTwo: Int?
     
     
     // MARK: - Life Cyles
