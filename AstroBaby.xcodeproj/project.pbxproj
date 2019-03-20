@@ -19,6 +19,8 @@
 		473DFE7C2217DA0A00755C2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473DFE7A2217DA0A00755C2A /* LaunchScreen.storyboard */; };
 		47569EA42219441F003CE666 /* ButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47569EA32219441F003CE666 /* ButtonController.swift */; };
 		47569EA622194442003CE666 /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47569EA522194442003CE666 /* MyColor.swift */; };
+		477B5FF022414FF9008A4CD5 /* CompatibilityChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B5FEF22414FF9008A4CD5 /* CompatibilityChart.swift */; };
+		477B5FF22241531F008A4CD5 /* ZodiacEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B5FF12241531F008A4CD5 /* ZodiacEnum.swift */; };
 		47E486492219096600F04FAE /* ParentSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E486482219096600F04FAE /* ParentSelectionVC.swift */; };
 		47E4864B221909DC00F04FAE /* ParentSelectionVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E4864A221909DC00F04FAE /* ParentSelectionVCell.swift */; };
 		47F9DD94221B0E2900E208C8 /* SelectedParentCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9DD93221B0E2900E208C8 /* SelectedParentCVCell.swift */; };
@@ -40,6 +42,8 @@
 		473DFE7D2217DA0A00755C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47569EA32219441F003CE666 /* ButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonController.swift; sourceTree = "<group>"; };
 		47569EA522194442003CE666 /* MyColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
+		477B5FEF22414FF9008A4CD5 /* CompatibilityChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityChart.swift; sourceTree = "<group>"; };
+		477B5FF12241531F008A4CD5 /* ZodiacEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacEnum.swift; sourceTree = "<group>"; };
 		47E486482219096600F04FAE /* ParentSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentSelectionVC.swift; sourceTree = "<group>"; };
 		47E4864A221909DC00F04FAE /* ParentSelectionVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentSelectionVCell.swift; sourceTree = "<group>"; };
 		47F9DD93221B0E2900E208C8 /* SelectedParentCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedParentCVCell.swift; sourceTree = "<group>"; };
@@ -89,7 +93,7 @@
 				47E48646221908E200F04FAE /* ModelController */,
 				47E48645221908D900F04FAE /* Model */,
 				47E48644221908D100F04FAE /* View */,
-				47E48643221908C600F04FAE /* HelperFiles */,
+				47E48643221908C600F04FAE /* Utilities */,
 				47E48642221908B900F04FAE /* Resources */,
 			);
 			path = AstroBaby;
@@ -105,14 +109,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		47E48643221908C600F04FAE /* HelperFiles */ = {
+		47E48643221908C600F04FAE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				47569EA32219441F003CE666 /* ButtonController.swift */,
 				47569EA522194442003CE666 /* MyColor.swift */,
 				7E8BE3AF223BE40E007D1923 /* DateHelper.swift */,
+				477B5FEF22414FF9008A4CD5 /* CompatibilityChart.swift */,
+				477B5FF12241531F008A4CD5 /* ZodiacEnum.swift */,
 			);
-			path = HelperFiles;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		47E48644221908D100F04FAE /* View */ = {
@@ -227,6 +233,7 @@
 			files = (
 				47E486492219096600F04FAE /* ParentSelectionVC.swift in Sources */,
 				473DED5D221C629300035D57 /* Zodiac+Convenience.swift in Sources */,
+				477B5FF22241531F008A4CD5 /* ZodiacEnum.swift in Sources */,
 				473DFE772217DA0700755C2A /* AstroBaby.xcdatamodeld in Sources */,
 				473DED5F221C653200035D57 /* ZodiacController.swift in Sources */,
 				47569EA42219441F003CE666 /* ButtonController.swift in Sources */,
@@ -237,6 +244,7 @@
 				7E8BE3B0223BE40E007D1923 /* DateHelper.swift in Sources */,
 				47E4864B221909DC00F04FAE /* ParentSelectionVCell.swift in Sources */,
 				47569EA622194442003CE666 /* MyColor.swift in Sources */,
+				477B5FF022414FF9008A4CD5 /* CompatibilityChart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +399,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HVDL2745KX;
+				DEVELOPMENT_TEAM = L7AYJDAX2C;
 				INFOPLIST_FILE = "$(SRCROOT)/AstroBaby/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -409,7 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HVDL2745KX;
+				DEVELOPMENT_TEAM = L7AYJDAX2C;
 				INFOPLIST_FILE = "$(SRCROOT)/AstroBaby/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
