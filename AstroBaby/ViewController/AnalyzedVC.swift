@@ -8,15 +8,14 @@
 
 import UIKit
 
-class AnalyzedVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class AnalyzedVC: UIViewController {
 
     // MARK: - Outlets
-    
-    @IBOutlet weak var yearPicker: UIPickerView!
-    @IBOutlet weak var outputLabel: UILabel!
-    @IBOutlet weak var chosenZodiac: UILabel!
+ 
     
     // MARK: - Constants and Variables
+    
+    // NOTE: - Parents that came from home screen controller
     
     var parentOne: Int?
     var parentTwo: Int?
@@ -27,15 +26,15 @@ class AnalyzedVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        yearPicker.delegate = self
-        yearPicker.dataSource = self
-        print("parent 1: \(String(describing: parentOne) )\nparent 2:\(String(describing: parentTwo))")
     }
+    
+    
+    // NOTE: -  This needs to be the cell Tapped func
     
     @IBAction func zodiacButtonTapped(_ sender: UIButton) {
         
         var goalComponents = DateComponents()
-        goalComponents.year = yearPicker.selectedRow(inComponent: 0) + 2019
+//        goalComponents.year = yearPicker.selectedRow(inComponent: 0) + 2019
         goalComponents.calendar = Calendar.current
         var goalStart = Date()
         var goalEnd = Date()
@@ -157,26 +156,13 @@ class AnalyzedVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         default: return
         }
         
-        chosenZodiac.text = desiredZodiac.uppercased() + " \(yearPicker.selectedRow(inComponent: 0) + 2019)"
-        conceptionStart = goalStart.subtract38Weeks
-        conceptionMiddle = conceptionStart.add15Days
-        conceptionEnd = goalEnd.subtract38Weeks
+        // MARK: -  Prepare for Segue
         
-        outputLabel.text = "\(desiredZodiac) babies are born between \(goalStart.mmmmd) and \(goalEnd.mmmmd).\n\n\nThe suggested conception window for a \(yearPicker.selectedRow(inComponent: 0) + 2019) \(desiredZodiac) baby is between \(conceptionStart.mmddyy) and \(conceptionEnd.mmddyy).\n\n\nThe optimal conception date is \(conceptionMiddle.mmddyy)."
-    }
-    
-    // MARK: - YearPicker
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 50
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        return "\(row + 2019)"
+//        chosenZodiac.text = desiredZodiac.uppercased() + " \(yearPicker.selectedRow(inComponent: 0) + 2019)"
+//        conceptionStart = goalStart.subtract38Weeks
+//        conceptionMiddle = conceptionStart.add15Days
+//        conceptionEnd = goalEnd.subtract38Weeks
+//
+//        outputLabel.text = "\(desiredZodiac) babies are born between \(goalStart.mmmmd) and \(goalEnd.mmmmd).\n\n\nThe suggested conception window for a \(yearPicker.selectedRow(inComponent: 0) + 2019) \(desiredZodiac) baby is between \(conceptionStart.mmddyy) and \(conceptionEnd.mmddyy).\n\n\nThe optimal conception date is \(conceptionMiddle.mmddyy)."
     }
 }
