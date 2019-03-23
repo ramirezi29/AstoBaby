@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		471EE50B2245BEA6003680B0 /* BabyDetailBV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EE50A2245BEA6003680B0 /* BabyDetailBV.swift */; };
 		4727518422342E2200415E2C /* AnalyzedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727518322342E2200415E2C /* AnalyzedVC.swift */; };
 		473DED5B221C623300035D57 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473DED5A221C623300035D57 /* CoreDataStack.swift */; };
 		473DED5D221C629300035D57 /* Zodiac+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473DED5C221C629300035D57 /* Zodiac+Convenience.swift */; };
 		473DED5F221C653200035D57 /* ZodiacController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473DED5E221C653200035D57 /* ZodiacController.swift */; };
-		473DED62221D220E00035D57 /* Couples.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473DED60221D220E00035D57 /* Couples.storyboard */; };
 		473DFE6F2217DA0700755C2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473DFE6E2217DA0700755C2A /* AppDelegate.swift */; };
 		473DFE742217DA0700755C2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473DFE722217DA0700755C2A /* Main.storyboard */; };
 		473DFE772217DA0700755C2A /* AstroBaby.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 473DFE752217DA0700755C2A /* AstroBaby.xcdatamodeld */; };
@@ -28,11 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		471EE50A2245BEA6003680B0 /* BabyDetailBV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyDetailBV.swift; sourceTree = "<group>"; };
 		4727518322342E2200415E2C /* AnalyzedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzedVC.swift; sourceTree = "<group>"; };
 		473DED5A221C623300035D57 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		473DED5C221C629300035D57 /* Zodiac+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Zodiac+Convenience.swift"; sourceTree = "<group>"; };
 		473DED5E221C653200035D57 /* ZodiacController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacController.swift; sourceTree = "<group>"; };
-		473DED61221D220E00035D57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = AstroBaby/View/Base.lproj/Couples.storyboard; sourceTree = "<group>"; };
 		473DFE6B2217DA0700755C2A /* AstroBaby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstroBaby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		473DFE6E2217DA0700755C2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		473DFE732217DA0700755C2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				473DFE722217DA0700755C2A /* Main.storyboard */,
-				473DED60221D220E00035D57 /* Couples.storyboard */,
 				473DFE7A2217DA0A00755C2A /* LaunchScreen.storyboard */,
 				47E4864A221909DC00F04FAE /* ParentSelectionVCell.swift */,
 				47F9DD93221B0E2900E208C8 /* SelectedParentCVCell.swift */,
@@ -155,6 +154,7 @@
 			children = (
 				47E486482219096600F04FAE /* ParentSelectionVC.swift */,
 				4727518322342E2200415E2C /* AnalyzedVC.swift */,
+				471EE50A2245BEA6003680B0 /* BabyDetailBV.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -217,7 +217,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				473DED62221D220E00035D57 /* Couples.storyboard in Resources */,
 				473DFE7C2217DA0A00755C2A /* LaunchScreen.storyboard in Resources */,
 				473DFE792217DA0A00755C2A /* Assets.xcassets in Resources */,
 				473DFE742217DA0700755C2A /* Main.storyboard in Resources */,
@@ -238,6 +237,7 @@
 				473DED5F221C653200035D57 /* ZodiacController.swift in Sources */,
 				47569EA42219441F003CE666 /* ButtonController.swift in Sources */,
 				473DED5B221C623300035D57 /* CoreDataStack.swift in Sources */,
+				471EE50B2245BEA6003680B0 /* BabyDetailBV.swift in Sources */,
 				473DFE6F2217DA0700755C2A /* AppDelegate.swift in Sources */,
 				47F9DD94221B0E2900E208C8 /* SelectedParentCVCell.swift in Sources */,
 				4727518422342E2200415E2C /* AnalyzedVC.swift in Sources */,
@@ -251,14 +251,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		473DED60221D220E00035D57 /* Couples.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				473DED61221D220E00035D57 /* Base */,
-			);
-			name = Couples.storyboard;
-			sourceTree = "<group>";
-		};
 		473DFE722217DA0700755C2A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
