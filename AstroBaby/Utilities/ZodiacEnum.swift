@@ -22,3 +22,19 @@ enum Zoo: String {
     case aquarius = "aquarius"
     case pisces = "pisces"
 }
+
+enum ZodiacNumber: Int {
+    
+    case taurus
+    case aries
+    case gemini
+    case cancer
+    case leo
+    case virgo
+    case libra
+    case scorpio
+    case sagittarius
+    case capricorn
+    case aquarius
+    case pisces
+}
