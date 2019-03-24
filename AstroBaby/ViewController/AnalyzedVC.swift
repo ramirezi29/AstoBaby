@@ -9,9 +9,9 @@
 import UIKit
 
 class AnalyzedVC: UIViewController {
-
+    
     // MARK: - Outlets
- 
+    
     
     // MARK: - Constants and Variables
     
@@ -25,7 +25,11 @@ class AnalyzedVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+          view.addVerticalGradientLayer()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
     }
     
     

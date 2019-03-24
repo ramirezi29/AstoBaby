@@ -26,7 +26,6 @@ class SelectedParentCVCell: UICollectionViewCell {
         }
         DispatchQueue.main.async {
             
-            
             self.seletedParentZodiacLabel.text = selectedZodiac.zodiacName
             
             self.selectedParentImageView.image = UIImage(named: (selectedZodiac.zodiactImageName!))

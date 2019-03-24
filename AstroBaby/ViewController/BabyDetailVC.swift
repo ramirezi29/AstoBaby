@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BabyDetailBV: UIViewController {
+class BabyDetailVC: UIViewController {
     
     // MARK: - Outlets
     
@@ -26,9 +26,9 @@ class BabyDetailBV: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.addVerticalGradientLayer()
         yearPicker.delegate = self
         yearPicker.dataSource = self
-        
     }
     
     func updateView() {
@@ -168,7 +168,7 @@ class BabyDetailBV: UIViewController {
     }
 }
 
-extension BabyDetailBV: UIPickerViewDelegate, UIPickerViewDataSource {
+extension BabyDetailVC: UIPickerViewDelegate, UIPickerViewDataSource {
     
     // MARK: - YearPicker
     

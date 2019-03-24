@@ -24,6 +24,6 @@ class IRButton: UIButton {
         setTitleColor(MyColor.offWhite.value, for: .normal)
         backgroundColor = .blue
         titleLabel?.font = .boldSystemFont(ofSize: 25)
-        layer.cornerRadius = frame.size.height / 8
+        layer.cornerRadius = frame.size.height / 2
     }
 }

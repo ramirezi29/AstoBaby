@@ -42,6 +42,16 @@ class ParentSelectionVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.addVerticalGradientLayer()
+        
+        self.topCollectionView.backgroundColor = .clear 
+        //Hide Navigation bar
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        
+      analyzeButton.setTitle("Compare", for: .normal) 
         //Collection View
         
         self.buttomCollectionView.delegate = self
@@ -61,6 +71,13 @@ class ParentSelectionVC: UIViewController {
         self.topCollectionView.allowsMultipleSelection = false
         self.topCollectionView.selectItem(at: NSIndexPath(item: 0, section: 0) as IndexPath, animated: false, scrollPosition: [])
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+      
+    }
+    
     
     // MARK: - Actions
     
@@ -95,6 +112,8 @@ extension ParentSelectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
                 return UICollectionViewCell()
             }
             
+            cell.backgroundColor = .clear
+            cell.selectedParentImageView.backgroundColor = .clear
             switch indexPath.row {
             // NOTE: - Parent One
             case 0:
