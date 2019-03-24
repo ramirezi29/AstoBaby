@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		471EE50B2245BEA6003680B0 /* BabyDetailBV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EE50A2245BEA6003680B0 /* BabyDetailBV.swift */; };
+		471EE50B2245BEA6003680B0 /* BabyDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EE50A2245BEA6003680B0 /* BabyDetailVC.swift */; };
 		4727518422342E2200415E2C /* AnalyzedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727518322342E2200415E2C /* AnalyzedVC.swift */; };
 		473DED5B221C623300035D57 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473DED5A221C623300035D57 /* CoreDataStack.swift */; };
 		473DED5D221C629300035D57 /* Zodiac+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473DED5C221C629300035D57 /* Zodiac+Convenience.swift */; };
@@ -21,6 +21,7 @@
 		47569EA622194442003CE666 /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47569EA522194442003CE666 /* MyColor.swift */; };
 		477B5FF022414FF9008A4CD5 /* CompatibilityChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B5FEF22414FF9008A4CD5 /* CompatibilityChart.swift */; };
 		477B5FF22241531F008A4CD5 /* ZodiacEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B5FF12241531F008A4CD5 /* ZodiacEnum.swift */; };
+		47DECDF12247F3F400DF340A /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DECDF02247F3F400DF340A /* UIExtension.swift */; };
 		47E486492219096600F04FAE /* ParentSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E486482219096600F04FAE /* ParentSelectionVC.swift */; };
 		47E4864B221909DC00F04FAE /* ParentSelectionVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E4864A221909DC00F04FAE /* ParentSelectionVCell.swift */; };
 		47F9DD94221B0E2900E208C8 /* SelectedParentCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9DD93221B0E2900E208C8 /* SelectedParentCVCell.swift */; };
@@ -28,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		471EE50A2245BEA6003680B0 /* BabyDetailBV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyDetailBV.swift; sourceTree = "<group>"; };
+		471EE50A2245BEA6003680B0 /* BabyDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyDetailVC.swift; sourceTree = "<group>"; };
 		4727518322342E2200415E2C /* AnalyzedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzedVC.swift; sourceTree = "<group>"; };
 		473DED5A221C623300035D57 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		473DED5C221C629300035D57 /* Zodiac+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Zodiac+Convenience.swift"; sourceTree = "<group>"; };
@@ -44,6 +45,7 @@
 		47569EA522194442003CE666 /* MyColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
 		477B5FEF22414FF9008A4CD5 /* CompatibilityChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityChart.swift; sourceTree = "<group>"; };
 		477B5FF12241531F008A4CD5 /* ZodiacEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacEnum.swift; sourceTree = "<group>"; };
+		47DECDF02247F3F400DF340A /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 		47E486482219096600F04FAE /* ParentSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentSelectionVC.swift; sourceTree = "<group>"; };
 		47E4864A221909DC00F04FAE /* ParentSelectionVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentSelectionVCell.swift; sourceTree = "<group>"; };
 		47F9DD93221B0E2900E208C8 /* SelectedParentCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedParentCVCell.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				473DFE7A2217DA0A00755C2A /* LaunchScreen.storyboard */,
 				47E4864A221909DC00F04FAE /* ParentSelectionVCell.swift */,
 				47F9DD93221B0E2900E208C8 /* SelectedParentCVCell.swift */,
+				47DECDF02247F3F400DF340A /* UIExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -154,7 +157,7 @@
 			children = (
 				47E486482219096600F04FAE /* ParentSelectionVC.swift */,
 				4727518322342E2200415E2C /* AnalyzedVC.swift */,
-				471EE50A2245BEA6003680B0 /* BabyDetailBV.swift */,
+				471EE50A2245BEA6003680B0 /* BabyDetailVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -237,7 +240,8 @@
 				473DED5F221C653200035D57 /* ZodiacController.swift in Sources */,
 				47569EA42219441F003CE666 /* ButtonController.swift in Sources */,
 				473DED5B221C623300035D57 /* CoreDataStack.swift in Sources */,
-				471EE50B2245BEA6003680B0 /* BabyDetailBV.swift in Sources */,
+				47DECDF12247F3F400DF340A /* UIExtension.swift in Sources */,
+				471EE50B2245BEA6003680B0 /* BabyDetailVC.swift in Sources */,
 				473DFE6F2217DA0700755C2A /* AppDelegate.swift in Sources */,
 				47F9DD94221B0E2900E208C8 /* SelectedParentCVCell.swift in Sources */,
 				4727518422342E2200415E2C /* AnalyzedVC.swift in Sources */,
