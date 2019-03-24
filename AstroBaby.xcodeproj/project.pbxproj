@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47126AB12247F88F003D49BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47126AB02247F88F003D49BF /* Constants.swift */; };
 		471EE50B2245BEA6003680B0 /* BabyDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EE50A2245BEA6003680B0 /* BabyDetailVC.swift */; };
 		4727518422342E2200415E2C /* AnalyzedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727518322342E2200415E2C /* AnalyzedVC.swift */; };
 		473DED5B221C623300035D57 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473DED5A221C623300035D57 /* CoreDataStack.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47126AB02247F88F003D49BF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		471EE50A2245BEA6003680B0 /* BabyDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyDetailVC.swift; sourceTree = "<group>"; };
 		4727518322342E2200415E2C /* AnalyzedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzedVC.swift; sourceTree = "<group>"; };
 		473DED5A221C623300035D57 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				7E8BE3AF223BE40E007D1923 /* DateHelper.swift */,
 				477B5FEF22414FF9008A4CD5 /* CompatibilityChart.swift */,
 				477B5FF12241531F008A4CD5 /* ZodiacEnum.swift */,
+				47126AB02247F88F003D49BF /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47E486492219096600F04FAE /* ParentSelectionVC.swift in Sources */,
+				47126AB12247F88F003D49BF /* Constants.swift in Sources */,
 				473DED5D221C629300035D57 /* Zodiac+Convenience.swift in Sources */,
 				477B5FF22241531F008A4CD5 /* ZodiacEnum.swift in Sources */,
 				473DFE772217DA0700755C2A /* AstroBaby.xcdatamodeld in Sources */,
