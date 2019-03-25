@@ -12,14 +12,15 @@ class BabyDetailVC: UIViewController {
     
     // MARK: - Outlets
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var expectedWindowLabel: UILabel!
     @IBOutlet weak var outputLabel: UILabel!
     @IBOutlet weak var yearPicker: UIPickerView!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var zodiacImageView: UIImageView!
     
     // MARK: - Landing Pad Properties
     
     var chosenZodiac: ZodiacNumber?
-    
     
     // MARK: - Lifecycle Methods
     
@@ -29,10 +30,14 @@ class BabyDetailVC: UIViewController {
         view.addVerticalGradientLayer()
         yearPicker.delegate = self
         yearPicker.dataSource = self
+        updateView()
+        expectedWindowLabel.text = "select a year"
+        outputLabel.text = ""
     }
     
     func updateView() {
         
+        chosenZodiac = ZodiacNumber.pisces
         var goalComponents = DateComponents()
         goalComponents.year = yearPicker.selectedRow(inComponent: 0) + 2019
         goalComponents.calendar = Calendar.current
@@ -159,12 +164,16 @@ class BabyDetailVC: UIViewController {
             
         }
         
-        nameLabel.text = desiredZodiac.uppercased() + " \(yearPicker.selectedRow(inComponent: 0) + 2019)"
+        zodiacImageView.image = UIImage(named: desiredZodiac.lowercased())
+        
+        nameLabel.text = desiredZodiac.uppercased()
         conceptionStart = goalStart.subtract38Weeks
         conceptionMiddle = conceptionStart.add15Days
         conceptionEnd = goalEnd.subtract38Weeks
         
-        outputLabel.text = "\(desiredZodiac) babies are born between \(goalStart.mmmmd) and \(goalEnd.mmmmd).\n\n\nThe suggested conception window for a \(yearPicker.selectedRow(inComponent: 0) + 2019) \(desiredZodiac) baby is between \(conceptionStart.mmddyy) and \(conceptionEnd.mmddyy).\n\n\nThe optimal conception date is \(conceptionMiddle.mmddyy)."
+        expectedWindowLabel.text = "If born between \(goalStart.mmmmd) and \(goalEnd.mmmmd)."
+        
+        outputLabel.text = "In order to have a baby between \(goalStart.mmmmd) and \(goalEnd.mmmmd), the suggested conception window is from:\n\n\(conceptionStart.mmddyy) to \(conceptionEnd.mmddyy).\n\n\n\n\nThe optimal conception date is\n\n\(conceptionMiddle.mmddyy)\n\nbecause it lands right in the middle of that window."
     }
 }
 
@@ -183,6 +192,10 @@ extension BabyDetailVC: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         return "\(row + 2019)"
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        updateView()
     }
 }
 
