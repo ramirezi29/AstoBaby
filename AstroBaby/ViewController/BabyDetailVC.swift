@@ -37,7 +37,6 @@ class BabyDetailVC: UIViewController {
     
     func updateView() {
         
-        chosenZodiac = ZodiacNumber.pisces
         var goalComponents = DateComponents()
         goalComponents.year = yearPicker.selectedRow(inComponent: 0) + 2019
         goalComponents.calendar = Calendar.current
