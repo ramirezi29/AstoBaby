@@ -9,32 +9,16 @@
 import Foundation
 
 enum Zoo: String {
+    case aries = "Aries"
     case taurus = "Taurus"
-    case aries = "aries"
-    case gemini = "gemini"
-    case cancer = "cancer"
-    case leo = "leo"
-    case virgo = "virgo"
-    case libra = "libra"
-    case scorpio = "scorpio"
-    case sagittarius = "sagittarius"
-    case capricorn = "capricorn"
-    case aquarius = "aquarius"
-    case pisces = "pisces"
-}
-
-enum ZodiacNumber: Int {
-    
-    case taurus
-    case aries
-    case gemini
-    case cancer
-    case leo
-    case virgo
-    case libra
-    case scorpio
-    case sagittarius
-    case capricorn
-    case aquarius
-    case pisces
+    case gemini = "Gemini"
+    case cancer = "Cancer"
+    case leo = "Leo"
+    case virgo = "Virgo"
+    case libra = "Libra"
+    case scorpio = "Scorpio"
+    case sagittarius = "Sagittarius"
+    case capricorn = "Capricorn"
+    case aquarius = "Aquarius"
+    case pisces = "Pisces"
 }

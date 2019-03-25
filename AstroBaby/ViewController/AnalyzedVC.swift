@@ -19,7 +19,7 @@ class AnalyzedVC: UIViewController {
     
     var parentOne: Int?
     var parentTwo: Int?
-    
+    var chosenZodiac: Zoo? // Whatever cell they tap on should set this property. Then segue it to the baby view where it will set everything up.
     
     // MARK: - Life Cyles
     
@@ -32,9 +32,8 @@ class AnalyzedVC: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = true
     }
     
-    
-    // NOTE: -  This needs to be the cell Tapped func
-    
-    @IBAction func zodiacButtonTapped(_ sender: UIButton) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationVC = segue.destination as? BabyDetailVC else { return }
+        destinationVC.chosenZodiac = chosenZodiac
     }
 }
