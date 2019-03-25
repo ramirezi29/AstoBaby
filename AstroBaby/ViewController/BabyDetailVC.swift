@@ -20,7 +20,7 @@ class BabyDetailVC: UIViewController {
     
     // MARK: - Landing Pad Properties
     
-    var chosenZodiac: ZodiacNumber?
+    var chosenZodiac: Zoo?
     
     // MARK: - Lifecycle Methods
     
@@ -30,9 +30,12 @@ class BabyDetailVC: UIViewController {
         view.addVerticalGradientLayer()
         yearPicker.delegate = self
         yearPicker.dataSource = self
-        updateView()
         expectedWindowLabel.text = "select a year"
         outputLabel.text = ""
+        if let zodiac = chosenZodiac {
+            nameLabel.text = zodiac.rawValue.uppercased()
+            zodiacImageView.image = UIImage(named: zodiac.rawValue.lowercased())
+        }
     }
     
     func updateView() {
@@ -45,127 +48,111 @@ class BabyDetailVC: UIViewController {
         var conceptionStart = Date()
         var conceptionMiddle = Date()
         var conceptionEnd = Date()
-        var desiredZodiac = ""
         guard let chosenZodiac = chosenZodiac else { return }
         
         switch chosenZodiac.rawValue {
             
-        case 1 : // March 21 - April 20
+        case Zoo.aries.rawValue: // March 21 - April 20
             goalComponents.month = 3
             goalComponents.day = 21
             goalStart = goalComponents.date!
             goalComponents.month = 4
             goalComponents.day = 20
             goalEnd = goalComponents.date!
-            desiredZodiac = "Aries"
             
             
-        case 0: // April 21 - May 21
+        case Zoo.taurus.rawValue: // April 21 - May 21
             goalComponents.month = 4
             goalComponents.day = 21
             goalStart = goalComponents.date!
             goalComponents.month = 5
             goalComponents.day = 21
             goalEnd = goalComponents.date!
-            desiredZodiac = "Taurus"
             
-        case 2: // May 22 - June 21
+        case Zoo.gemini.rawValue: // May 22 - June 21
             goalComponents.month = 5
             goalComponents.day = 22
             goalStart = goalComponents.date!
             goalComponents.month = 6
             goalComponents.day = 21
             goalEnd = goalComponents.date!
-            desiredZodiac = "Gemini"
             
-        case 3: // June 22 - July 22
+        case Zoo.cancer.rawValue: // June 22 - July 22
             goalComponents.month = 6
             goalComponents.day = 22
             goalStart = goalComponents.date!
             goalComponents.month = 7
             goalComponents.day = 22
             goalEnd = goalComponents.date!
-            desiredZodiac = "Cancer"
             
-        case 4: // July 23 - August 21
+        case Zoo.leo.rawValue: // July 23 - August 21
             goalComponents.month = 7
             goalComponents.day = 23
             goalStart = goalComponents.date!
             goalComponents.month = 8
             goalComponents.day = 21
             goalEnd = goalComponents.date!
-            desiredZodiac = "Leo"
             
-        case 5: // August 22 - September 23
+        case Zoo.virgo.rawValue: // August 22 - September 23
             goalComponents.month = 8
             goalComponents.day = 22
             goalStart = goalComponents.date!
             goalComponents.month = 9
             goalComponents.day = 23
             goalEnd = goalComponents.date!
-            desiredZodiac = "Virgo"
             
-        case 6: // September 24 - October 23
+        case Zoo.libra.rawValue: // September 24 - October 23
             goalComponents.month = 9
             goalComponents.day = 24
             goalStart = goalComponents.date!
             goalComponents.month = 10
             goalComponents.day = 23
             goalEnd = goalComponents.date!
-            desiredZodiac = "Libra"
             
-        case 7: // October 24 - November 22
+        case Zoo.scorpio.rawValue: // October 24 - November 22
             goalComponents.month = 10
             goalComponents.day = 24
             goalStart = goalComponents.date!
             goalComponents.month = 11
             goalComponents.day = 22
             goalEnd = goalComponents.date!
-            desiredZodiac = "Scorpio"
             
-        case 8: // November 23 - December 22
+        case Zoo.sagittarius.rawValue: // November 23 - December 22
             goalComponents.month = 11
             goalComponents.day = 23
             goalStart = goalComponents.date!
             goalComponents.month = 12
             goalComponents.day = 22
             goalEnd = goalComponents.date!
-            desiredZodiac = "Sagittarius"
             
-        case 9: // December 23 - January 20
+        case Zoo.capricorn.rawValue: // December 23 - January 20
             goalComponents.month = 12
             goalComponents.day = 23
             goalStart = goalComponents.date!
             goalComponents.month = 1
             goalComponents.day = 20
             goalEnd = goalComponents.date!
-            desiredZodiac = "Capricorn"
             
-        case 10: // January 21 - February 19
+        case Zoo.aquarius.rawValue: // January 21 - February 19
             goalComponents.month = 1
             goalComponents.day = 21
             goalStart = goalComponents.date!
             goalComponents.month = 2
             goalComponents.day = 19
             goalEnd = goalComponents.date!
-            desiredZodiac = "Aquarius"
             
-        case 11: // February 20 - March 20
+        case Zoo.pisces.rawValue: // February 20 - March 20
             goalComponents.month = 2
             goalComponents.day = 20
             goalStart = goalComponents.date!
             goalComponents.month = 3
             goalComponents.day = 20
             goalEnd = goalComponents.date!
-            desiredZodiac = "Pisces"
             
         default: return
             
         }
         
-        zodiacImageView.image = UIImage(named: desiredZodiac.lowercased())
-        
-        nameLabel.text = desiredZodiac.uppercased()
         conceptionStart = goalStart.subtract38Weeks
         conceptionMiddle = conceptionStart.add15Days
         conceptionEnd = goalEnd.subtract38Weeks
@@ -185,7 +172,7 @@ extension BabyDetailVC: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 50
+        return 81
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
