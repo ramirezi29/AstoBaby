@@ -74,10 +74,12 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pfx-2n-wXb" userLabel="Parent Zodiac Collection View">
-                                <rect key="frame" x="19" y="64" width="320" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pfx-2n-wXb" userLabel="Parent Zodiac Collection View">
+                                <rect key="frame" x="27.5" y="64" width="320" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="cRK-bq-Rdn"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yRJ-J6-XNk">
                                     <size key="itemSize" width="125" height="127"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -122,11 +124,14 @@
                         <constraints>
                             <constraint firstItem="xq8-2K-11B" firstAttribute="width" secondItem="Nw6-0r-ZaL" secondAttribute="width" multiplier="0.5" id="5PV-tT-CRd"/>
                             <constraint firstItem="kb1-V8-hSe" firstAttribute="bottom" secondItem="l3d-eu-1Xn" secondAttribute="bottom" id="93L-sI-MRv"/>
+                            <constraint firstItem="pfx-2n-wXb" firstAttribute="top" secondItem="kb1-V8-hSe" secondAttribute="top" id="E3A-Ew-5gW"/>
                             <constraint firstItem="xq8-2K-11B" firstAttribute="leading" secondItem="kb1-V8-hSe" secondAttribute="leading" constant="94" id="I8p-yS-vay"/>
                             <constraint firstItem="l3d-eu-1Xn" firstAttribute="width" secondItem="Nw6-0r-ZaL" secondAttribute="width" multiplier="0.9" id="J2A-uV-VGS"/>
                             <constraint firstItem="l3d-eu-1Xn" firstAttribute="top" secondItem="kb1-V8-hSe" secondAttribute="top" constant="214" id="OW3-G8-vxl"/>
                             <constraint firstItem="kb1-V8-hSe" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xq8-2K-11B" secondAttribute="trailing" symbolic="YES" id="Zef-yu-B5H"/>
                             <constraint firstItem="kb1-V8-hSe" firstAttribute="trailing" secondItem="l3d-eu-1Xn" secondAttribute="trailing" constant="17" id="amT-3A-GAf"/>
+                            <constraint firstItem="xq8-2K-11B" firstAttribute="top" secondItem="pfx-2n-wXb" secondAttribute="bottom" constant="8" id="cKk-Zu-mp6"/>
+                            <constraint firstItem="pfx-2n-wXb" firstAttribute="centerX" secondItem="kb1-V8-hSe" secondAttribute="centerX" id="jSE-BM-8b1"/>
                             <constraint firstItem="xq8-2K-11B" firstAttribute="top" secondItem="kb1-V8-hSe" secondAttribute="top" constant="136" id="xH1-yD-tee"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kb1-V8-hSe"/>
